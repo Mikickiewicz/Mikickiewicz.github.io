@@ -1,11 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:wght@300;400;700&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  color: #c5c6c7;
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  color: #e0e0e0;
   background: #000;
   overflow-x: hidden;
   min-height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('cosmos.jpg') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.7;
+  z-index: -1;
+  animation: flicker 6s infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.66; }
+  50% { opacity: 0.86; }
+  100% { opacity: 0.64; }
 }
 
 #particles-js {
@@ -24,7 +46,7 @@ body {
   max-width: 900px;
   margin: 50px auto;
   padding: 30px;
-  background: rgba(11, 12, 16, 0.85);
+  background: rgba(20, 10, 35, 0.85);
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.8);
   backdrop-filter: blur(12px);
@@ -48,29 +70,42 @@ body {
   width: 170px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-  border: 3px solid #66fcf1;
-  transition: transform 0.3s ease;
+  box-shadow: 0 0 20px rgba(186, 85, 255, 0.6),
+              0 0 40px rgba(255, 105, 180, 0.3);
+  border: 3px solid #ba55ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   object-fit: cover;
 }
 
-
 .profile-img:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(186, 85, 255, 0.8),
+              0 0 50px rgba(0, 191, 255, 0.4);
+}
+
+/* POWIĘKSZONY I BARDZIEJ CZYTELNY OPIS */
+.profile p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ddd;
+  font-weight: 300;
+  margin-top: 10px;
 }
 
 h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 3rem;
-  color: #66fcf1;
+  background: linear-gradient(90deg, #ba55ff, #ff6ec7, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   letter-spacing: 3px;
   margin: 0;
 }
 
 h2 {
   font-family: 'Orbitron', sans-serif;
-  color: #45a29e;
-  border-left: 4px solid #66fcf1;
+  color: #d98aff;
+  border-left: 4px solid #ba55ff;
   padding-left: 12px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -84,7 +119,9 @@ ul {
 
 ul li::before {
   content: "✦ ";
-  color: #66fcf1;
+  background: linear-gradient(45deg, #ba55ff, #ff6ec7, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .card-container {
@@ -98,13 +135,14 @@ ul li::before {
   padding: 15px;
   border-radius: 10px;
   flex: 1 1 300px;
-  border: 1px solid rgba(102, 252, 241, 0.2);
-  transition: transform 0.3s ease;
+  border: 1px solid rgba(186, 85, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(102, 252, 241, 0.3);
+  box-shadow: 0 0 15px rgba(186, 85, 255, 0.4),
+              0 0 25px rgba(0, 191, 255, 0.2);
 }
 
 .links {
@@ -113,24 +151,25 @@ ul li::before {
 }
 
 .links a {
-  color: #66fcf1;
+  color: #fff;
   text-decoration: none;
   font-weight: 700;
   margin: 0 15px;
   padding: 10px 20px;
-  border: 1px solid #66fcf1;
   border-radius: 25px;
-  background: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg, rgba(186, 85, 255, 0.1), rgba(255, 105, 180, 0.1));
   transition: all 0.3s ease;
   display: inline-block;
+  box-shadow: 0 0 4px rgba(186, 85, 255, 0.12);
 }
 
 .links a:hover {
-  background: #66fcf1;
+  background: linear-gradient(135deg, #ba55ff, #ff6ec7, #00bfff);
   color: #0b0c10;
-  box-shadow: 0 0 15px #45a29e;
+  box-shadow: 0 0 7px #ba55ff, 0 0 10px #00bfff;
   transform: scale(1.05);
 }
+
 footer {
   text-align: center;
   margin-top: 40px;
@@ -139,17 +178,21 @@ footer {
 
 footer p {
   font-size: 14px;
-  color: #888;
+  color: #aaa;
 }
 
 .card a {
-  color: #66fcf1;
+  background: linear-gradient(45deg, #ba55ff, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .card a:hover, .card a:focus {
-  color: #45a29e;
+  background: linear-gradient(45deg, #ff6ec7, #ba55ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: underline;
 }
