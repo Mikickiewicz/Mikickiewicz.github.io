@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <title>Mikolaj Basiaga</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Orbitron&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
   <div id="particles-js"></div>
   <div class="container">
     <header>
       <div class="profile">
-        <img src="{{ url_for('static', filename='photo.jpg') }}" alt="Mikolaj profile picture" class="profile-img">
+        <img src="static/photo.jpg" alt="Mikolaj profile picture" class="profile-img">
         <div>
           <h1>Mikolaj Basiaga</h1>
           <p><em>Future Aeronautical Engineering Student at <strong>Inholland University of Applied Sciences, Delft (Netherlands)</strong>.</em></p>
-          <p>I am passionate about physics, programming, and space exploration. I enjoy learning Python and C++. I also love fantasy books , swimming and cooking</p>
+          <p>I am passionate about physics, programming, and space exploration. I enjoy learning Python and C++. I also love fantasy books, swimming, and cooking</p>
         </div>
       </div>
     </header>
@@ -67,8 +67,6 @@
     </footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="{{ url_for('static', filename='particles.js') }}"></script>
-
-
+  <script src="static/particles.js"></script>
 </body>
 </html>
