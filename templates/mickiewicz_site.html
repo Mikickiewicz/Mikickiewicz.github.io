@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mikolaj Basiaga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Orbitron&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div class="container">
+    <header>
+      <div class="profile">
+        <img src="{{ url_for('static', filename='photo.jpg') }}" alt="Mikolaj profile picture" class="profile-img">
+        <div>
+          <h1>Mikolaj Basiaga</h1>
+          <p><em>Future Aeronautical Engineering Student at <strong>Inholland University of Applied Sciences, Delft (Netherlands)</strong>.</em></p>
+          <p>I am passionate about physics, programming, and space exploration. I enjoy learning Python and C++. I also love fantasy books , swimming and cooking</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Favorite Books</h2>
+        <ul>
+          <li><em>Pale Blue Dot</em> by Carl Sagan</li>
+          <li><em>Eragon</em> by Christopher Paolini</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="card-container">
+          <div class="card">
+            <p><strong>2021 - 2025</strong></p>
+            <p>II High School, Nowy Sącz, Poland</p>
+          </div>
+          <div class="card">
+            <p><strong>From 2025</strong></p>
+            <p>Inholland University of Applied Sciences, Delft Aeronautical Engineering, Netherlands</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="card-container">
+          <div class="card">
+            <p>Physics: ⭐️⭐️⭐️⭐️⭐️</p>
+          </div>
+          <div class="card">
+            <p>Python: ⭐️⭐️⭐️</p>
+          </div>
+          <div class="card">
+            <p>C++: ⭐️</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="links">
+        <a href="hobbies.html">My Hobbies</a>
+        <a href="contact.html">Contact Me</a>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="{{ url_for('static', filename='particles.js') }}"></script>
+
+
+</body>
+</html>
