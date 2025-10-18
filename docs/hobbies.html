@@ -10,44 +10,60 @@
   <div id="particles-js"></div>
   <div class="container">
     <header>
-      <!-- Usunięte górne menu nawigacyjne -->
       <h1>My Hobbies</h1>
       <p>Things that keep me curious and inspired.</p>
     </header>
 
     <main>
-  <section>
-    <h2>What I Love Doing</h2>
-    <div class="card-container">
-       <div class="card">
-        <h3>Volleyball (H12 Team, Delft Punch)</h3>
-        <p>I love playing volleyball with friends — it’s energetic, team-based, and always keeps me motivated to move.</p>
-      </div>
-      <div class="card">
-        <h3>Stargazing & Space Dreaming</h3>
-        <p>There’s something humbling about staring at the night sky and realizing how tiny we are. I like to imagine where humanity will go next.</p>
-      </div>
-      <div class="card">
-        <h3>Coding</h3>
-        <p>It’s like solving puzzles that actually come to life. I enjoy creating small projects that make my life easier—or just for fun.</p>
-      </div>
-      <div class="card">
-        <h3>Swimming & Road Cycling</h3>
-        <p>Swimming helps me relax and clear my head a bit. I’m not super serious about it — I just like getting some movement in every few days. Sometimes I switch it up and go for a ride on my road bike instead.</p>
-      </div>
-      <div class="card">
-        <h3>Cooking</h3>
-        <p>I like experimenting in the kitchen. Sometimes it’s amazing, sometimes it’s a disaster, but it’s always fun.</p>
-      </div>
-      <div class="card">
-        <h3>Reading Fantasy Books</h3>
-        <p>Good stories make me forget about time. <em>Harry Potter</em> is a classic, but I’m always on the hunt for the next great world to dive into.</p>
-      </div>
+      <section>
+        <h2>What I Love Doing</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Volleyball (H12 Team, Delft Punch)</h3>
+            <p>I love playing volleyball with friends — it’s energetic, team-based, and always keeps me motivated to move.</p>
+          </div>
 
-    </div>
-  </section>
-</main>
+          <div class="card" id="space-dreaming">
+            <h3>Stargazing & Space Dreaming</h3>
+            <p>There’s something humbling about staring at the night sky and realizing how tiny we are. I like to imagine where humanity will go next.</p>
+          </div>
 
+          <div class="card">
+            <h3>Coding</h3>
+            <p>I like coding, especially doing challenges on Codewars. It’s fun to solve tricky problems and see if I can figure them out.</p>
+          </div>
+
+          <div class="card">
+            <h3>Swimming & Road Cycling</h3>
+            <p>Swimming helps me relax and clear my head a bit. I’m not super serious about it — I just like getting some movement in every few days. Sometimes I switch it up and go for a ride on my road bike instead.</p>
+          </div>
+
+          <div class="card">
+            <h3>Cooking</h3>
+            <p>Once in a blue moon, I like to cook something special.</p>
+          </div>
+
+          <div class="card">
+            <h3>Reading Fantasy Books</h3>
+            <p>Right now I’m reading <em>The Desert Spear</em> from the Demon Cycle series by Peter V. Brett. It’s full of demons, magic, and epic adventures.</p>
+          </div>
+        </div>
+
+        <!-- Sekcja cytatu Carla Sagana -->
+        <div id="quote-section" style="display:none; margin-top:20px; overflow:auto;">
+          <img src="static/pale_blue_dot.jpg"
+               alt="Pale Blue Dot"
+               style="width:400px; float:left; margin-right:20px; margin-bottom:10px; border-radius:8px;">
+          <div style="font-size:1.2em; line-height:1.5;">
+            <p><em>
+                “The significance of our lives and our fragile planet is then determined only by our own wisdom and courage. We are the custodians of life's meaning. We long for a Parent to care for us, to forgive us our errors, to save us from our childish mistakes. But knowledge is preferable to ignorance. Better by far to embrace the hard truth than a reassuring fable. If we crave some cosmic purpose, then let us find ourselves a worthy goal.”
+            </em></p>
+            <footer>- Carl Sagan, <cite>Pale Blue Dot</cite></footer>
+          </div>
+        </div>
+
+      </section>
+    </main>
 
     <footer>
       <div class="links">
@@ -57,7 +73,19 @@
       <p>© 2025 All rights reserved. This website and its content are protected by copyright.</p>
     </footer>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="static/particles.js"></script>
+  <script>
+    const spaceCard = document.querySelector('#space-dreaming');
+    const quoteSection = document.querySelector('#quote-section');
+
+    spaceCard.addEventListener('click', () => {
+      quoteSection.style.display = quoteSection.style.display === 'block' ? 'none' : 'block';
+      if(quoteSection.style.display === 'block'){
+        quoteSection.scrollIntoView({behavior: 'smooth'});
+      }
+    });
+  </script>
 </body>
 </html>

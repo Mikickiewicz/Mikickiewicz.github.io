@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f9af358-e475-4536-9705-6a5fb2c84bd2" name="Changes" comment="Website version Beta02">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/my_projects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/static/pale_blue_dot.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/hobbies.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/hobbies.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
     </list>
@@ -35,7 +35,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Mikickiewicz/Mikickiewicz.github.io",
-    "accountId": "9aa33208-334f-4af6-8897-3923889ed407"
+    "accountId": "bf7cd1df-89e1-4a9f-afa7-2e6ce3d9e433"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -65,6 +65,8 @@
       <recent name="C:\Users\mikib\PycharmProjects\My_cv_site\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/docs/static" />
       <recent name="C:\Users\mikib\PycharmProjects\My_cv_site\docs" />
       <recent name="C:\Users\mikib\PycharmProjects\My_cv_site" />
       <recent name="C:\Users\mikib\PycharmProjects\My_cv_site\templates" />
@@ -102,7 +104,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
       </set>
     </attachedChunks>
   </component>
